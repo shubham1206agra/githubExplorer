@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Github Explorer</title>
+        <!-- bootstrap5 css import -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+            crossorigin="anonymous"
+        />
+        <!-- font awesome css import -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+            integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+            crossorigin="anonymous"
+        />
+        <!-- custom css -->
+        <link href="./index.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <!-- navbar -->
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">GitHub Explorer</span>
+            </div>
+        </nav>
+        <!-- input container -->
+        <div class="row g-2 sp">
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input
+                        type="text"
+                        class="form-control inp1"
+                        id="floatingInputGrid"
+                        placeholder="Google"
+                        required
+                    />
+                    <label for="floatingInputGrid">Organisation</label>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-floating">
+                    <input
+                        type="number"
+                        class="form-control inp2"
+                        id="floatingNGrid"
+                        min="1"
+                        max="1000"
+                        placeholder="1"
+                        value="5"
+                    />
+                    <label for="floatingNGrid">N (Top Repos)</label>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-floating">
+                    <input
+                        type="number"
+                        class="form-control inp3"
+                        id="floatingMGrid"
+                        min="1"
+                        placeholder="1"
+                        value="3"
+                    />
+                    <label for="floatingMGrid">M (Top Committees)</label>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <input
+                    type="button"
+                    class="btn btn-outline-secondary btn-lg z"
+                    value="Fetch"
+                />
+            </div>
+        </div>
+        <hr />
+        <!-- Main content container -->
+        <div id="sel"></div>
+
+        <!-- Modal -->
+        <div
+            class="modal fade"
+            id="contriModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            Contributors
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body" id="mbo"></div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap5 js import -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+            crossorigin="anonymous"
+        ></script>
+        <!-- custom js import -->
+        <script src="./index.js"></script>
+    </body>
+</html>

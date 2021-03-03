@@ -1,0 +1,21 @@
+/* seperating inputs from navbar */
+.sp {
+    padding: 1%;
+}
+
+/* size correction for fetch btn */
+.btn-lg {
+    padding: .8rem 1.5rem;
+}
+
+/* align correction for accordion */
+#accordionContent {
+    padding-top: 0.6rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+/* for coloring view link blank */
+.spq a, .spq a:hover {
+    color: black;
+}
